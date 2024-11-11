@@ -1,21 +1,16 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using MediatR;
+﻿using MediatR;
+using Microsoft.AspNetCore.Mvc;
 
-namespace CDBInvestimentos.API.Controllers;
+namespace CdbInvestimentos.API.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
-public class CDBController : ControllerBase
+public class CdbController(IMediator mediator) : ControllerBase
 {
-    private readonly IMediator _mediator;
-
-    public CDBController(IMediator mediator)
-    {
-        _mediator = mediator;
-    }
+    private readonly IMediator _mediator = mediator;
 
     [HttpPost("calcular")]
-    public async Task<IActionResult> CalcularCDB([FromBody] CalcularCDBCommand command)
+    public async Task<IActionResult> CalcularCdb([FromBody] CalcularCdbCommand command)
     {
         var resultado = await _mediator.Send(command);
         return Ok(resultado);

@@ -1,6 +1,6 @@
-﻿namespace CDBInvestimentos.Dominio.Entities;
+﻿namespace CdbInvestimentos.Dominio.Entities;
 
-public class CDBInvestimento
+public class CdbInvestimento
 {
     public decimal ValorInicial { get; set; }
 

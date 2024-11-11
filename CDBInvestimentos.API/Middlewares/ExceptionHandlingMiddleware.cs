@@ -1,6 +1,8 @@
 ﻿using System.Net;
 using System.Text.Json;
 
+namespace CdbInvestimentos.API.Middlewares;
+
 public class ExceptionHandlingMiddleware
 {
     private readonly RequestDelegate _next;

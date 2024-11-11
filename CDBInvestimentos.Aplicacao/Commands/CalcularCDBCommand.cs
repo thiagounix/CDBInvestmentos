@@ -1,7 +1,7 @@
-﻿using CDBInvestimentos.Aplicacao.Responses;
+﻿using CdbInvestimentos.Aplicacao.Responses;
 using MediatR;
 
-public class CalcularCDBCommand : IRequest<CDBCalculoResultado>
+public class CalcularCdbCommand : IRequest<CdbCalculoResultado>
 {
     public decimal ValorInicial { get; set; }
     public int PrazoMeses { get; set; }

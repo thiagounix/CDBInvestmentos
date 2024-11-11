@@ -1,4 +1,4 @@
-﻿namespace CDBInvestimentos.Infraestrutura
+﻿namespace CdbInvestimentos.Infraestrutura
 {
     public class Class1
     {

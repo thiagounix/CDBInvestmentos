@@ -1,6 +1,6 @@
-﻿namespace CDBInvestimentos.Aplicacao.Services.Calculators
+﻿namespace CdbInvestimentos.Aplicacao.Services.Calculators
 {
-    public static class CDBCalculator
+    public static class CdbCalculator
     {
         private const decimal CDI = 0.009m;
         private const decimal TB = 1.08m;

@@ -13,15 +13,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Infrastructure", "4 - I
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5 - Tests", "5 - Tests", "{FF043F98-4956-4B86-AA68-93CB555D57FF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CDBInvestimentos.API", "CDBInvestimentos.API\CDBInvestimentos.API.csproj", "{F6341419-6272-4CEF-8E4B-9DD69E3789DC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CdbInvestimentos.API", "CdbInvestimentos.API\CdbInvestimentos.API.csproj", "{F6341419-6272-4CEF-8E4B-9DD69E3789DC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CDBInvestimentos.Aplicacao", "CDBInvestimentos.Aplicacao\CDBInvestimentos.Aplicacao.csproj", "{EBC66E1F-E4BB-4426-BCD6-C9D9FFCF4253}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CdbInvestimentos.Aplicacao", "CdbInvestimentos.Aplicacao\CdbInvestimentos.Aplicacao.csproj", "{EBC66E1F-E4BB-4426-BCD6-C9D9FFCF4253}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CDBInvestimentos.Dominio", "CDBInvestimentos.Dominio\CDBInvestimentos.Dominio.csproj", "{6DCFE11E-48B1-410F-8ADA-6070AF025D0C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CdbInvestimentos.Dominio", "CdbInvestimentos.Dominio\CdbInvestimentos.Dominio.csproj", "{6DCFE11E-48B1-410F-8ADA-6070AF025D0C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CDBInvestimentos.Infraestrutura", "CDBInvestimentos.Infraestrutura\CDBInvestimentos.Infraestrutura.csproj", "{D83EEF29-2F73-4945-B32B-B80F1D8092D2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CdbInvestimentos.Infraestrutura", "CdbInvestimentos.Infraestrutura\CdbInvestimentos.Infraestrutura.csproj", "{D83EEF29-2F73-4945-B32B-B80F1D8092D2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CDBInvestimentos.Testes", "CDBInvestimentos.Testes\CDBInvestimentos.Testes.csproj", "{0AEFDE2C-5225-4011-9EC1-7CE93A0C936F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CdbInvestimentos.Testes", "CdbInvestimentos.Testes\CdbInvestimentos.Testes.csproj", "{0AEFDE2C-5225-4011-9EC1-7CE93A0C936F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebApp", "WebApp", "{CBDAC0F3-6636-492C-9B02-8D0F74356CE6}"
 EndProject

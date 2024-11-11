@@ -1,6 +1,6 @@
 {
   "profiles": {
-    "CDBInvestimentos.API": {
+    "CdbInvestimentos.API": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "swagger",

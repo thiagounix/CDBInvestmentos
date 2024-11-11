@@ -1,14 +1,14 @@
-﻿using CDBInvestimentos.Aplicacao.Interfaces;
-using CDBInvestimentos.Aplicacao.Responses;
-using CDBInvestimentos.Aplicacao.Services.Calculators;
+﻿using CdbInvestimentos.Aplicacao.Interfaces;
+using CdbInvestimentos.Aplicacao.Responses;
+using CdbInvestimentos.Aplicacao.Services.Calculators;
 
-public class ServicoCalculadoraCDB : IServicoCalculadoraCDB
+public class ServicoCalculadoraCdb : IServicoCalculadoraCdb
 {
-    public async Task<CDBCalculoResultado> CalcularCDBAsync(decimal valorInicial, int prazoMeses)
+    public async Task<CdbCalculoResultado> CalcularCdbAsync(decimal valorInicial, int prazoMeses)
     {
         await Task.Delay(1);
 
-        decimal valorBruto = CDBCalculator.CalcularValorBruto(valorInicial, prazoMeses);
+        decimal valorBruto = CdbCalculator.CalcularValorBruto(valorInicial, prazoMeses);
 
         decimal taxaImposto = prazoMeses switch
         {
@@ -18,9 +18,9 @@ public class ServicoCalculadoraCDB : IServicoCalculadoraCDB
             _ => 15.0m
         };
 
-        decimal valorLiquido = CDBCalculator.CalcularValorLiquido(valorBruto, valorInicial, taxaImposto);
+        decimal valorLiquido = CdbCalculator.CalcularValorLiquido(valorBruto, valorInicial, taxaImposto);
 
-        return new CDBCalculoResultado
+        return new CdbCalculoResultado
         {
             ValorBruto = valorBruto,
             ValorLiquido = valorLiquido

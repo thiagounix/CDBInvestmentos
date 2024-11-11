@@ -1,9 +1,9 @@
-﻿using CDBInvestimentos.Aplicacao.Responses;
+﻿using CdbInvestimentos.Aplicacao.Responses;
 
-namespace CDBInvestimentos.Aplicacao.Interfaces
+namespace CdbInvestimentos.Aplicacao.Interfaces
 {
-    public interface IServicoCalculadoraCDB
+    public interface IServicoCalculadoraCdb
     {
-        Task<CDBCalculoResultado> CalcularCDBAsync(decimal valorInicial, int prazoMeses);
+        Task<CdbCalculoResultado> CalcularCdbAsync(decimal valorInicial, int prazoMeses);
     }
 }

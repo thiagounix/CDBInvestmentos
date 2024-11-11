@@ -1,19 +1,19 @@
-﻿using CDBInvestimentos.Aplicacao.Interfaces;
-using CDBInvestimentos.Aplicacao.Responses;
+﻿using CdbInvestimentos.Aplicacao.Interfaces;
+using CdbInvestimentos.Aplicacao.Responses;
 using MediatR;
 
-namespace CDBInvestimentos.Aplicacao.Handlers;
+namespace CdbInvestimentos.Aplicacao.Handlers;
 
-public class CalcularCDBCommandHandler : IRequestHandler<CalcularCDBCommand, CDBCalculoResultado>
+public class CalcularCdbCommandHandler : IRequestHandler<CalcularCdbCommand, CdbCalculoResultado>
 {
-    private readonly IServicoCalculadoraCDB _servicoCalculadoraCDB;
+    private readonly IServicoCalculadoraCdb _servicoCalculadoraCdb;
 
-    public CalcularCDBCommandHandler(IServicoCalculadoraCDB servicoCalculadoraCDB)
+    public CalcularCdbCommandHandler(IServicoCalculadoraCdb servicoCalculadoraCdb)
     {
-        _servicoCalculadoraCDB = servicoCalculadoraCDB;
+        _servicoCalculadoraCdb = servicoCalculadoraCdb;
     }
 
-    public async Task<CDBCalculoResultado> Handle(CalcularCDBCommand request, CancellationToken cancellationToken)
+    public async Task<CdbCalculoResultado> Handle(CalcularCdbCommand request, CancellationToken cancellationToken)
     {
         if (request == null)
         {
@@ -23,13 +23,13 @@ public class CalcularCDBCommandHandler : IRequestHandler<CalcularCDBCommand, CDB
         if (request.ValorInicial <= 0)
             throw new ArgumentException("O valor inicial deve ser maior que zero.");
 
-        if (request.PrazoMeses <= 1)
-            throw new ArgumentException("O prazo em meses deve ser maior que 1.");
+        if (request.PrazoMeses <= 0)
+            throw new ArgumentException("O prazo em meses deve ser maior que 0.");
 
         if (request.PrazoMeses > 1200)
             throw new ArgumentException("O prazo em meses é muito alto. O máximo permitido é 1200 meses.");
 
-        var resultado = await _servicoCalculadoraCDB.CalcularCDBAsync(request.ValorInicial, request.PrazoMeses);
+        var resultado = await _servicoCalculadoraCdb.CalcularCdbAsync(request.ValorInicial, request.PrazoMeses);
         return resultado;
     }
 }

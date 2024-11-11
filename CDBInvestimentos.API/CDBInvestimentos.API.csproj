@@ -11,8 +11,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CDBInvestimentos.Aplicacao\CDBInvestimentos.Aplicacao.csproj" />
-    <ProjectReference Include="..\CDBInvestimentos.Dominio\CDBInvestimentos.Dominio.csproj" />
+    <ProjectReference Include="..\CdbInvestimentos.Aplicacao\CdbInvestimentos.Aplicacao.csproj" />
+    <ProjectReference Include="..\CdbInvestimentos.Dominio\CdbInvestimentos.Dominio.csproj" />
   </ItemGroup>
 
 </Project>
