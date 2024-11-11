@@ -1,6 +1,8 @@
-﻿using CdbInvestimentos.Aplicacao.Handlers;
+﻿using CdbInvestimentos.Aplicacao.Commands;
+using CdbInvestimentos.Aplicacao.Handlers;
 using CdbInvestimentos.Aplicacao.Interfaces;
 using CdbInvestimentos.Aplicacao.Responses;
+using CdbInvestimentos.Aplicacao.Services;
 using CdbInvestimentos.Aplicacao.Services.Calculators;
 using Moq;
 

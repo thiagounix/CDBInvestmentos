@@ -1,4 +1,5 @@
-﻿using MediatR;
+﻿using CdbInvestimentos.Aplicacao.Commands;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CdbInvestimentos.API.Controllers;

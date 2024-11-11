@@ -1,4 +1,5 @@
-﻿using CdbInvestimentos.Aplicacao.Interfaces;
+﻿using CdbInvestimentos.Aplicacao.Commands;
+using CdbInvestimentos.Aplicacao.Interfaces;
 using CdbInvestimentos.Aplicacao.Responses;
 using MediatR;
 

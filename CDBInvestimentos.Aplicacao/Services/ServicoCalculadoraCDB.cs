@@ -2,6 +2,7 @@
 using CdbInvestimentos.Aplicacao.Responses;
 using CdbInvestimentos.Aplicacao.Services.Calculators;
 
+namespace CdbInvestimentos.Aplicacao.Services;
 public class ServicoCalculadoraCdb : IServicoCalculadoraCdb
 {
     public async Task<CdbCalculoResultado> CalcularCdbAsync(decimal valorInicial, int prazoMeses)

@@ -23,7 +23,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CdbInvestimentos.Infraestru
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CdbInvestimentos.Testes", "CdbInvestimentos.Testes\CdbInvestimentos.Testes.csproj", "{0AEFDE2C-5225-4011-9EC1-7CE93A0C936F}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebApp", "WebApp", "{CBDAC0F3-6636-492C-9B02-8D0F74356CE6}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "6 - WebApp", "6 - WebApp", "{CBDAC0F3-6636-492C-9B02-8D0F74356CE6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

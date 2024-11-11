@@ -1,7 +1,9 @@
 using CdbInvestimentos.API.Middlewares;
+using CdbInvestimentos.Aplicacao.Commands;
 using CdbInvestimentos.Aplicacao.Handlers;
 using CdbInvestimentos.Aplicacao.Interfaces;
 using CdbInvestimentos.Aplicacao.Responses;
+using CdbInvestimentos.Aplicacao.Services;
 using MediatR;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -35,4 +37,4 @@ app.UseCors("AllowAllOrigins");
 app.UseHttpsRedirection();
 app.UseAuthorization();
 app.MapControllers();
-app.Run();
+await app.RunAsync();
