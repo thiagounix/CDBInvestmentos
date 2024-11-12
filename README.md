@@ -2,7 +2,7 @@
 
 ## Descrição
 
-Este repositório contém uma solução para cálculo de investimentos em CDB, desenvolvida com uma arquitetura baseada em **CQRS** (Command Query Responsibility Segregation) e com métodos assíncronos (**async/await**) para otimização e organização do código. O projeto não possui integração com banco de dados nem persistência de dados, sendo utilizado exclusivamente para fins de cálculo e exibição no frontend. 
+Este repositório contém uma solução para cálculo de investimentos em CDB, para avaliação desenvolvida com uma arquitetura baseada em **CQRS** (Command Query Responsibility Segregation) e com métodos assíncronos (**async/await**) para otimização e organização do código. O projeto não possui integração com banco de dados nem persistência de dados, sendo utilizado exclusivamente para fins de cálculo e exibição no frontend. 
 
 A solução está dividida em dois projetos principais:
 - **API .NET (CDBInvestimentosAPI)** - Backend responsável por expor endpoints para cálculos de investimentos em CDB.
@@ -16,7 +16,7 @@ A solução está dividida em dois projetos principais:
 
 # CDB Investimentos
 
-Este projeto foi desenvolvido para calcular investimentos em CDB (Certificado de Depósito Bancário), utilizando uma arquitetura moderna e organizada que facilita a manutenção e a evolução do sistema.
+Este projeto foi desenvolvido para calcular investimentos em CDB, utilizando uma arquitetura moderna e organizada que facilita a manutenção e a evolução do sistema.
 
 ## Tecnologias e Ferramentas Utilizadas
 
@@ -92,18 +92,17 @@ Acesse o frontend em http://localhost:4200 no navegador.
 
 ## Observações Finais
 
-Este projeto foi desenvolvido com o objetivo de demonstrar conhecimento em arquitetura de software.
-Embora o sistema não tenha acesso a bancos de dados nem faça integração com APIs externas, foi implementado o padrão **CQRS (Command Query Responsibility Segregation)** e métodos **assíncronos (async)** em todo o backend.
+O projeto de avaliação foi desenvolvido com o objetivo de demonstrar conhecimento em arquitetura de software.
+Embora o sistema não tenha acesso a bancos de dados nem faça integração com APIs externas, foi implementado o padrão **CQRS** e métodos **assíncronos (async)** em todo o backend.
 Essa escolha foi feita para evidenciar boas práticas e a aplicação de princípios de **arquitetura limpa (Clean Code)** e **DDD (Domain-Driven Design)**.
 
-A utilização de **CQRS** permite uma clara separação entre comandos (operações de gravação) e consultas (operações de leitura), promovendo uma organização que facilita a escalabilidade e a manutenção do sistema.
+A utilização de **CQRS** permite uma clara separação entre comandos e consultas, promovendo uma organização que facilita a escalabilidade e a manutenção do sistema.
 Embora não fosse necessário neste contexto, onde as operações são executadas localmente e não envolvem persistência de dados, essa abordagem foi incluída para mostrar como a arquitetura pode ser projetada para sistemas mais complexos, nos quais o desacoplamento das operações de leitura e escrita seria essencial.
 
 Da mesma forma, os métodos **async** foram empregados para simular cenários onde as operações poderiam envolver processos assíncronos e de longa duração, como consultas a bancos de dados ou chamadas a serviços externos.
-Isso evidencia o entendimento de como otimizar o desempenho do sistema para futuras expansões, caso a aplicação venha a ter interações com serviços ou banco de dados.
 Essa estrutura também é um indicativo de como construir soluções com foco em performance e escalabilidade, mesmo quando essas características não são essenciais no cenário atual.
 
 ## Ausência de implementação da camada de Infraestrutura ##
-Neste projeto, devido à sua natureza e aos requisitos específicos, não foi implementado uma estrutura de acesso a dados completa. Como não há necessidade de persistir ou recuperar dados de uma base, não foram utilizados Entity Framework, Dapper ou qualquer outro ORM. Isso significa que não há mapeamento das entidades para tabelas em um banco de dados, nem a criação de um contexto (DbContext) com DbSets.
+Neste projeto de avaliação , devido à sua natureza e aos requisitos específicos, não foi implementado uma estrutura de acesso a dados completa. Como não há necessidade de persistir ou recuperar dados de uma base, não foram utilizados Entity Framework, Dapper ou qualquer outro ORM. Isso significa que não há mapeamento das entidades para tabelas em um banco de dados, nem a criação de um contexto (DbContext) com DbSets.
 
-Além disso, não foi necessário aplicar padrões como Unit of Work, que geralmente gerencia transações de banco de dados, nem o uso do AutoMapper para mapear entidades e DTOs (Data Transfer Objects). Em um cenário onde a persistência de dados fosse exigida, essas tecnologias e padrões seriam essenciais para garantir organização, escalabilidade e eficiência no acesso e manipulação dos dados.
+Além disso, não foi necessário aplicar padrões como Unit of Work, que geralmente gerencia transações de banco de dados, nem o uso do AutoMapper para mapear entidades e DTOs. Em um cenário onde a persistência de dados fosse exigida, essas tecnologias e padrões seriam essenciais para garantir organização, escalabilidade e eficiência no acesso e manipulação dos dados.
