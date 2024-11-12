@@ -11,55 +11,7 @@ A solução está dividida em dois projetos principais:
 ---
 
 ## Estrutura de Pastas
-/SolutionRoot
-├── CdbInvestimentos.API
-│   ├── Controllers
-│   │   └── CdbController.cs
-│   ├── Middlewares
-│   ├── appsettings.json
-│   └── Program.cs
-├── CdbInvestimentos.Aplicacao
-│   ├── Commands
-│   │   └── CalcularCdbCommand.cs
-│   ├── Handlers
-│   │   └── CalcularCdbCommandHandler.cs
-│   ├── Interfaces
-│   │   └── IServicoCalculadoraCdb.cs
-│   ├── Responses
-│   │   └── CdbCalculoResultado.cs
-│   └── Services
-│       ├── Calculators
-│       │   └── CdbCalculator.cs
-│       └── ServicoCalculadoraCdb.cs
-├── CdbInvestimentos.Dominio
-│   └── Entities
-│       └── CdbInvestimento.cs
-├── CdbInvestimentos.Infraestrutura
-│   └── Dependencies
-├── CdbInvestimentos.Testes
-│   ├── CalculadoraCdb
-│   │   └── ServicoCalculadoraCdbTests.cs
-├── cdb-investimentos-frontend
-│   └── src
-│       └── app
-│           ├── components
-│           │   └── cdb-calculo-form
-│           │       ├── cdb-calculo-form.component.html
-│           │       ├── cdb-calculo-form.component.scss
-│           │       ├── cdb-calculo-form.component.spec.ts
-│           │       └── cdb-calculo-form.component.ts
-│           └── services
-│               ├── cdb-calculo.service.spec.ts
-│               └── cdb-calculo.service.ts
-│           ├── app.component.html
-│           ├── app.component.scss
-│           ├── app.component.spec.ts
-│           ├── app.component.ts
-│           ├── app.config.ts
-│           ├── app.routes.ts
-│           ├── main.ts
-│           └── styles.scss
-
+![image](https://github.com/user-attachments/assets/5fb84208-aa77-46c4-8b0d-71b832616321)
 
 
 # CDB Investimentos
