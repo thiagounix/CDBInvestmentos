@@ -11,23 +11,54 @@ A solução está dividida em dois projetos principais:
 ---
 
 ## Estrutura de Pastas
-
-```plaintext
 /SolutionRoot
-│
-├── CDBInvestimentosAPI
-│   ├── Controllers
-│   ├── Models
-│   ├── Services
-│   └── CDBInvestimentosAPI.csproj
-│
-└── CdbInvestimentosFrontend
-    ├── src
-    │   ├── app
-    │   │   ├── components
-    │   │   ├── services
-    │   │   └── ...
-    └── angular.json
+├─ CdbInvestimentos.API
+├── Controllers
+│   └── CdbController.cs
+├── Middlewares
+├── appsettings.json
+└── Program.cs
+├─ CdbInvestimentos.Aplicacao
+├── Commands
+│   └── CalcularCdbCommand.cs
+├── Handlers
+│   └── CalcularCdbCommandHandler.cs
+├── Interfaces
+│   └── IServicoCalculadoraCdb.cs
+├── Responses
+│   └── CdbCalculoResultado.cs
+└── Services
+    └── Calculators
+        ├── CdbCalculator.cs
+        └── ServicoCalculadoraCdb.cs
+├─ CdbInvestimentos.Dominio
+└── Entities
+    └── CdbInvestimento.cs
+├─ CdbInvestimentos.Infraestrutura
+└── Dependencies
+├─ CdbInvestimentos.Testes
+└── CalculadoraCdb
+    └── ServicoCalculadoraCdbTests.cs
+├─ cdb-investimentos-frontend
+└── src
+    └── app
+        ├── components
+        │   └── cdb-calculo-form
+        │       ├── cdb-calculo-form.component.html
+        │       ├── cdb-calculo-form.component.scss
+        │       ├── cdb-calculo-form.component.spec.ts
+        │       └── cdb-calculo-form.component.ts
+        ├── services
+        │   ├── cdb-calculo.service.spec.ts
+        │   └── cdb-calculo.service.ts
+        ├── app.component.html
+        ├── app.component.scss
+        ├── app.component.spec.ts
+        ├── app.component.ts
+        ├── app.config.ts
+        ├── app.routes.ts
+        ├── main.ts
+        └── styles.scss
 
 # CDB Investimentos
 
@@ -35,13 +66,13 @@ Este projeto foi desenvolvido para calcular investimentos em CDB (Certificado de
 
 ## Tecnologias e Ferramentas Utilizadas
 
-- **Backend (.NET 6.0)**
+- **Backend (.NET 8.0)**
   - Desenvolvido com **C#** e **ASP.NET Core** para API.
   - Utilização do padrão **CQRS** (Command Query Responsibility Segregation) para separar comandos e consultas.
   - Métodos assíncronos (async) em toda a lógica de aplicação, garantindo melhor performance e escalabilidade, apesar de não haver acesso a uma base de dados externa.
   - Arquitetura baseada em **DDD (Domain-Driven Design)** e **Clean Code**, promovendo código legível, testável e fácil de manter.
 
-- **Frontend (Angular)**
+- **Frontend (Angular 18)**
   - Desenvolvido com **Angular CLI** em TypeScript, com **componentes Standalone** para modularidade.
   - Integração com a API do backend para cálculo do investimento.
   - Estilo e organização com **SCSS**.
@@ -117,3 +148,8 @@ Embora não fosse necessário neste contexto, onde as operações são executada
 Da mesma forma, os métodos **async** foram empregados para simular cenários onde as operações poderiam envolver processos assíncronos e de longa duração, como consultas a bancos de dados ou chamadas a serviços externos.
 Isso evidencia o entendimento de como otimizar o desempenho do sistema para futuras expansões, caso a aplicação venha a ter interações com serviços ou banco de dados.
 Essa estrutura também é um indicativo de como construir soluções com foco em performance e escalabilidade, mesmo quando essas características não são essenciais no cenário atual.
+
+## Ausência de implementação da camada de Infraestrutura ##
+Neste projeto, devido à sua natureza e aos requisitos específicos, não foi implementado uma estrutura de acesso a dados completa. Como não há necessidade de persistir ou recuperar dados de uma base, não foram utilizados Entity Framework, Dapper ou qualquer outro ORM. Isso significa que não há mapeamento das entidades para tabelas em um banco de dados, nem a criação de um contexto (DbContext) com DbSets.
+
+Além disso, não foi necessário aplicar padrões como Unit of Work, que geralmente gerencia transações de banco de dados, nem o uso do AutoMapper para mapear entidades e DTOs (Data Transfer Objects). Em um cenário onde a persistência de dados fosse exigida, essas tecnologias e padrões seriam essenciais para garantir organização, escalabilidade e eficiência no acesso e manipulação dos dados.
